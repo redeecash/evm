@@ -15,7 +15,8 @@
   "dependencies": {
     "bn.js": "^5.2.1",
     "express": "^4.21.2",
-    "ip": "^2.0.1"
+    "ip": "^2.0.1",
+    "p-queue": "^8.0.1"
   },
   "devDependencies": {
     "electron": "^33.2.1",

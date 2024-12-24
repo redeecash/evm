@@ -28,3 +28,19 @@ A standalone EVM for contract deployment and testing wuthout using any blockchai
   "id": 2
 }
 ```
+## Priority Queue
+Explanation
+
+1. PQueue:
+    - p-queue manages a queue of tasks with optional prioritization and concurrency limits.
+    - The concurrency option ensures that only a set number of tasks run simultaneously.
+
+2. Priority Handling:
+    - The priority is passed via the query string (e.g., ?priority=1&requestId=123).
+    - Tasks with a lower priority value are processed first (default priority is 10 if not provided).
+
+3. Middleware Integration:
+    - The middleware intercepts requests, adds them to the priority queue, and ensures they are processed in the order defined by the queue.
+
+4. Concurrency Limit:
+    - The concurrency: 2 setting ensures that no more than 2 tasks are processed at the same time.
