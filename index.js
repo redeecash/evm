@@ -1,4 +1,5 @@
 const express = require('express');
+const PQueue = require('p-queue');
 const ip = require('ip');
 const EVM = require('./src/EVM');
 const Contract = require('./src/Contract');
@@ -11,8 +12,28 @@ let contract = null;
 
 const app = express();
 
+// Create a priority queue with a concurrency limit
+const apiQueue = new PQueue({ concurrency: 1 }); // Allows 1 concurrent requests
+
+
 // Use express.json() for parsing JSON request bodies
 app.use(express.json());
+
+// Middleware to enqueue API requests
+//app.use((req, res, next) => {
+//  // Priority could be based on some logic, here we use a default priority of 10
+//  const priority = parseInt(req.query.priority, 10) || 10;
+//
+//  apiQueue.add(() => processApiCall(req.query.requestId || 'unknown'), { priority })
+//    .then(() => {
+//      res.json({ message: 'API call completed' });
+//    })
+//    .catch((err) => {
+//      console.error(err);
+//      res.status(500).json({ message: 'Error processing API call' });
+//    });
+//});
+
 
 // JSON-RPC handler
 app.post('/', async (req, res) => {
