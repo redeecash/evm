@@ -1,0 +1,25 @@
+{
+  "name": "evm",
+  "description": "A standalone EVM without blockchain connectivity",
+  "version": "1.0.0",
+  "author": "PRESSPAGE ENTERTAINMENT INC<presspage.enteretainment@gmail.com>",
+  "build": {
+    "icon": "logo.png"
+  },
+  "private": false,
+  "scripts": {
+    "start": "nodemon index.js",
+    "build": "electron-builder",
+    "clean": "rm -rf dist && echo 'Project cleaned!'"
+  },
+  "dependencies": {
+    "bn.js": "^5.2.1",
+    "express": "^4.21.2",
+    "ip": "^2.0.1"
+  },
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
+    "nodemon": "^3.1.9"
+  }
+}
