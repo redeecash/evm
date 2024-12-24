@@ -43,4 +43,4 @@ Explanation
     - The middleware intercepts requests, adds them to the priority queue, and ensures they are processed in the order defined by the queue.
 
 4. Concurrency Limit:
-    - The concurrency: 2 setting ensures that no more than 2 tasks are processed at the same time.
+    - The concurrency: 1 setting ensures that no more than 1 task is processed at the same time.
