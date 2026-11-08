@@ -1,7 +1,7 @@
 {
   "name": "evm",
-  "description": "A standalone EVM without blockchain connectivity",
-  "version": "1.0.0",
+  "description": "Standalone EVM Runtime with Persistent Storage",
+  "version": "2.0.0",
   "author": "PRESSPAGE ENTERTAINMENT INC<presspage.enteretainment@gmail.com>",
   "build": {
     "icon": "logo.png"
@@ -13,14 +13,27 @@
     "clean": "rm -rf dist && echo 'Project cleaned!'"
   },
   "dependencies": {
+    "@ethereumjs/common": "^10.1.3",
+    "@ethereumjs/tx": "^10.1.3",
+    "@ethereumjs/util": "^10.1.3",
+    "axios": "^1.21.0",
     "bn.js": "^5.2.1",
+    "ethereum-cryptography": "^3.2.0",
+    "ethereumjs-util": "^7.0.2",
     "express": "^4.21.2",
     "ip": "^2.0.1",
+    "level": "^10.0.0",
     "p-queue": "^8.0.1"
   },
   "devDependencies": {
-    "electron": "^33.2.1",
-    "electron-builder": "^25.1.8",
+    "electron": "^45.2.3",
+    "electron-builder": "^25.1.0",
     "nodemon": "^3.1.9"
+  },
+  "allowScripts": {
+    "electron-winstaller@5.4.0": true,
+    "classic-level@3.0.0": true,
+    "keccak@3.0.4": true,
+    "secp256k1@4.0.5": true
   }
 }
