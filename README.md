@@ -1,6 +1,10 @@
 # Ethereum Virtual Machine (EVM)
 A standalone EVM for contract deployment and testing wuthout using any blockchain or gas.
 
+## Blockchain Explorer
+An embedded blockchain explorer available on port 8000,
+![explorer](./explorer.png)
+
 ## Test Requests
 
 **Deploy Contract**
